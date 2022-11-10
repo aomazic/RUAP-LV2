@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContactManager.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,10 +14,21 @@ namespace ContactManager.Controllers
         {
             return View();
         }
-        public string Get()
+        public Contact[] Get()
         {
-            return "Hello World";
-           
+            return new Contact[]
+            {
+        new Contact
+        {
+            Id = 1,
+            Name = "Glenn Block"
+        },
+        new Contact
+        {
+            Id = 2,
+            Name = "Dan Roth"
+        }
+            };
         }
     }
 }
